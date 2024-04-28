@@ -60,7 +60,7 @@ let showData = (arr)=>{
     orignaldata.forEach((ele,i)=>{
 
         let row =document.createElement("tr")
-        row.innerHTML=`<td>${i+1}</td>
+        row.innerHTML=`<td>${ele.id}</td>
                        <td>${ele.name}</td>
                        <td>${ele.gender}</td>
                        <td>${ele.department}</td>
@@ -71,5 +71,29 @@ let showData = (arr)=>{
 
 }
 
+//  function for page next 
+var count=1;
+function next(){
+  
+count++;
+if(count==11){
+   count=1;
+}
 
-getData('https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-employees')
+getData(`https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-employees?page=${count}&limit=10`)
+
+
+}
+
+//  function for previous page
+function prev(){
+   count--;
+   if(count==0){
+        count=10;
+   }
+ 
+   
+   getData(`https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-employees?page=${count}&limit=10`)
+}
+
+getData(` https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-employees?page=${1}&limit=10`)
