@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Employee Mangement System</h1>
+   
+    <div id="filter-section">
+       
+        <label>Filter by Department:</label>
+        <select id="fil-depart">
+            <option disabled="disabled" selected="select">--Select Department--</option>
+            <option value="hr">HR</option>
+            <option value="finance">Finance</option>
+            <option value="marketing">Marketing</option>
+            <option value="engineering">Engineering</option>
+            <option value="operations">Operations</option>
+        </select>
+
+        <label>Filter by Gender:</label>
+        <select   id="fil-gender">
+            <option disabled="disabled" selected="select">--Select gender--</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+
+        <label>Sort by Salary:</label>
+        <select  id="fil-salary">
+            <option  disabled="disabled" selected="select">--Select order--</option>
+            <option value="asc">low to high</option>
+            <option value="desc">high to low</option>
+        </select>
+   </div>
+   
+   <table>
+     
+     <thead>
+       <tr>
+        <th>S.no</th>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Department</th>
+        <th>Salary</th>
+       </tr>
+     </thead>
+
+     <tbody>
+         <!-- appending will happen here  -->
+     </tbody>
+
+   </table>
+</body>
+ 
+<script src="script.js"></script>
+</html>
